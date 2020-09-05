@@ -1,6 +1,7 @@
 package Model1.javaaproach.be.Model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Person {
@@ -14,8 +15,8 @@ public class Person {
     @Enumerated
     private Gender gender;
 
-    @ManyToOne
-    private Course course;
+    @OneToMany
+    private List<Course> modules;
 
     public Integer getId() {
         return id;
@@ -53,12 +54,12 @@ public class Person {
         return this;
     }
 
-    public Course getCourse() {
-        return course;
+    public List<Course> getModules() {
+        return modules;
     }
 
-    public Person setCourse(Course course) {
-        this.course = course;
+    public Person setModules(List<Course> modules) {
+        this.modules = modules;
         return this;
     }
 
@@ -69,7 +70,7 @@ public class Person {
                 ", firstName='" + firstName + ' ' +
                 ", familyName='" + familyName + ' ' +
                 ", gender=" + gender +
-                ", course=" + course +
+
                 '}';
     }
 }
