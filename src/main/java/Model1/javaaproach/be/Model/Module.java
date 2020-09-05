@@ -14,7 +14,7 @@ public class Module {
     @Lob
     private String description;
 
-    @ManyToOne
+    @ManyToOne()
     private Course course;
 
     @OneToMany(mappedBy = "module")
@@ -76,4 +76,3 @@ public class Module {
                 '}';
     }
 }
-
