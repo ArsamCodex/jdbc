@@ -3,13 +3,18 @@ package Model1.javaaproach.be.Model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @Entity
-public class User {
+@Table(name = "User")
+
+public class user {
 
     @Id
     private String login;
+
     private String passwordHash;
+
     private Boolean isActive;
 
     @OneToOne
@@ -19,7 +24,7 @@ public class User {
         return login;
     }
 
-    public User setLogin(String login) {
+    public user setLogin(String login) {
         this.login = login;
         return this;
     }
@@ -28,7 +33,7 @@ public class User {
         return passwordHash;
     }
 
-    public User setPasswordHash(String passwordHash) {
+    public user setPasswordHash(String passwordHash) {
         this.passwordHash = passwordHash;
         return this;
     }
@@ -37,7 +42,7 @@ public class User {
         return isActive;
     }
 
-    public User setActive(Boolean active) {
+    public user setActive(Boolean active) {
         isActive = active;
         return this;
     }
@@ -46,7 +51,7 @@ public class User {
         return person;
     }
 
-    public User setPerson(Person person) {
+    public user setPerson(Person person) {
         this.person = person;
         return this;
     }
@@ -54,8 +59,8 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "login='" + login + ' ' +
-                ", passwordHash='" + passwordHash + ' ' +
+                "login='" + login + '\'' +
+                ", passwordHash='" + passwordHash + '\'' +
                 ", isActive=" + isActive +
                 ", person=" + person +
                 '}';
