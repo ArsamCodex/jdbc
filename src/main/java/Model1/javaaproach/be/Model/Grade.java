@@ -6,6 +6,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
 public class Grade {
 
@@ -14,7 +15,7 @@ public class Grade {
     private Long id;
 
     @ManyToOne
-    private Person person;
+    private List<Person> person;
 
 
     private BigDecimal gradeValue;
@@ -26,9 +27,9 @@ public class Grade {
 
     private String internalComment;
 
-    private Boolean isAbsent;
+    private Boolean absent;
 
-    private Boolean isPostponed;
+    private Boolean postponed;
 
     private LocalDate date;
 
@@ -41,11 +42,11 @@ public class Grade {
         return this;
     }
 
-    public Person getPerson() {
+    public List<Person> getPerson() {
         return person;
     }
 
-    public Grade setPerson(Person person) {
+    public Grade setPerson(List<Person> person) {
         this.person = person;
         return this;
     }
@@ -87,20 +88,20 @@ public class Grade {
     }
 
     public Boolean getAbsent() {
-        return isAbsent;
+        return absent;
     }
 
     public Grade setAbsent(Boolean absent) {
-        isAbsent = absent;
+        this.absent = absent;
         return this;
     }
 
     public Boolean getPostponed() {
-        return isPostponed;
+        return postponed;
     }
 
     public Grade setPostponed(Boolean postponed) {
-        isPostponed = postponed;
+        this.postponed = postponed;
         return this;
     }
 
@@ -112,20 +113,4 @@ public class Grade {
         this.date = date;
         return this;
     }
-
-    @Override
-    public String toString() {
-        return "Grade{" +
-                "id=" + id +
-                ", person=" + person +
-                ", gradeValue=" + gradeValue +
-                ", exam=" + exam +
-                ", comment='" + comment + '\'' +
-                ", internalComment='" + internalComment + '\'' +
-                ", isAbsent=" + isAbsent +
-                ", isPostponed=" + isPostponed +
-                ", date=" + date +
-                '}';
-    }
 }
-
