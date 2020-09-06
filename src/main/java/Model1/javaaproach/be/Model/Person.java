@@ -18,6 +18,20 @@ public class Person {
     
     private Course course;
 
+
+    @ ManyToMany
+    Private List<Course> courseHistoey;
+
+      public List<Course> getCourseHisrory() {
+        return this;
+    }
+
+    public Person setCourseHistory(List<Course> courseHistory) {
+        this.courseHistoey = courseHistory;
+        return this;
+    }
+
+
     public Integer getId() {
         return id;
     }
