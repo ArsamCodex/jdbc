@@ -19,7 +19,7 @@ public class Person {
     private Course course;
 
 
-    @ ManyToMany
+    @OneToMany(mappedby="person")
     Private List<Course> courseHistoey;
 
       public List<Course> getCourseHisrory() {
