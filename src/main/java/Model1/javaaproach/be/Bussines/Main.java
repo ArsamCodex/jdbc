@@ -24,7 +24,7 @@ public class Main {
         et.commit();
         em.close();
         emf.close();
-        System.out.println(person.toString());
+       // System.out.println(person.toString());
 
 
 
