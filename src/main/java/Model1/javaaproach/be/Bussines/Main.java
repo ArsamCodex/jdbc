@@ -25,7 +25,8 @@ public class Main {
         em.close();
         emf.close();
        // System.out.println(person.toString());
-
+       
+       // TODO CALL STATIC METHOD HIER
 
 
     }
