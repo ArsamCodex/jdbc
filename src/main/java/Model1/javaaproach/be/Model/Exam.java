@@ -16,6 +16,10 @@ public class Exam {
     private Integer weight;
     private Integer total;
 
+    Private List<Exam> subExam;
+
+    
+
     @ManyToOne
     private Module module;
 
