@@ -15,8 +15,8 @@ public class Person {
     @Enumerated
     private Gender gender;
 
-    @OneToMany
-    private List<Course> modules;
+    
+    private Course course;
 
     public Integer getId() {
         return id;
