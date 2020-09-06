@@ -18,6 +18,17 @@ public class Exam {
 
     Private List<Exam> subExam;
 
+
+    
+
+      public List<Exam> getSubExam() {
+        return this;
+    }
+
+    public Person setSubExam(List<Exam> SubExam) {
+        this.subExam= SubExam;
+        return this;
+    }
     
 
     @ManyToOne
