@@ -9,7 +9,7 @@ Public class UserRepository{
 
 
 // WOrking whith smartfoon typo
-   Public static void outputExam(User user){
+   Public static void outputExam(Long id){
      em.getTransaction ().begin();
      User user = em.find(User.class ,6);
      System.out.println(user.toStrung());
